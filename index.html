@@ -2,78 +2,157 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>الرئيسية</title>
+  <title>متجري</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-      font-family:'Cairo',sans-serif;
+    * {
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    body{
-      background:#0f172a;
-      color:white;
+    body {
+      background: #f5f5f5;
     }
 
-    header{
-      background:#020617;
-      padding:20px;
-      text-align:center;
-      font-size:24px;
-      font-weight:bold;
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 15px;
     }
 
-    .container{
-      padding:20px;
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .categories{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
     }
 
-    .category{
-      background:linear-gradient(135deg,#1e293b,#020617);
-      border-radius:16px;
-      padding:30px 10px;
-      text-align:center;
-      text-decoration:none;
-      color:white;
-      transition:0.3s;
-      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    .search-box {
+      flex: 1;
+      min-width: 200px;
     }
 
-    .category i{
-      font-size:36px;
-      margin-bottom:10px;
-      display:block;
+    .search-box input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
     }
 
-    .category span{
-      font-size:16px;
-      font-weight:bold;
+    .icons i {
+      margin-left: 15px;
+      cursor: pointer;
     }
 
-    .category:hover{
-      transform:scale(1.05);
-      background:linear-gradient(135deg,#2563eb,#1e40af);
+    .banner {
+      background: url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
+      background-size: cover;
+      background-position: center;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+    }
+
+    /* ===== Categories ===== */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .category {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+
+    .category i {
+      font-size: 30px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .category span {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .category:hover {
+      background: #0f172a;
+      color: white;
+    }
+
+    .category:hover i {
+      color: white;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  المتجر
+  <div class="top-header">
+    <div class="logo">متجري</div>
+
+    <div class="search-box">
+      <input type="text" placeholder="ابحث عن منتج...">
+    </div>
+
+    <div class="icons">
+      <i class="fa fa-user"></i>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+  </div>
 </header>
 
-<div class="container">
+<div class="banner">
+  أفضل العروض 🔥
+</div>
+
+<div class="section">
+  <h2>الفئات</h2>
+
   <div class="categories">
 
     <a href="laptop.html" class="category">
@@ -86,18 +165,32 @@
       <span>ألعاب</span>
     </a>
 
-    <a href="#" class="category">
+    <a href="headphones.html" class="category">
       <i class="fa fa-headphones"></i>
       <span>سماعات</span>
     </a>
 
-    <a href="#" class="category">
+    <a href="keyboards.html" class="category">
+      <i class="fa fa-keyboard"></i>
+      <span>كيبوردات</span>
+    </a>
+
+    <a href="mice.html" class="category">
+      <i class="fa fa-mouse"></i>
+      <span>ماوسات</span>
+    </a>
+
+    <a href="parts.html" class="category">
       <i class="fa fa-microchip"></i>
       <span>قطع كمبيوتر</span>
     </a>
 
   </div>
 </div>
+
+<footer>
+  © 2025 جميع الحقوق محفوظة
+</footer>
 
 </body>
 </html>
